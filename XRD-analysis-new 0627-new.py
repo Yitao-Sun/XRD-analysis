@@ -88,8 +88,6 @@ def set_window(N, Q_original, intensity_original):
 ###   find peaks   ###
 def FindPeaks(q,count):
     tw=int(50)    #test width
-    threshold=0.05*np.max(count)
-    threshold=0.075
     threshold=np.std(count[0:50])*6
     peaks=[]
     for j in range(tw,len(q)-tw):
